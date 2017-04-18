@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-supertest/supertest/lib/agent.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-supertest/node_modules/supertest/lib/agent.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,9 +190,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-supertest">npmtest-supertest (v0.0.2)</a>
+        <a href="https://github.com/npmtest/node-npmtest-supertest">npmtest-supertest (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-supertest/supertest/lib/agent.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-supertest/node_modules/supertest/lib/agent.js</span></h1>
     <h2>
         
         Statements: <span class="metric">34.48% <small>(10 / 29)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-supertest/supertest/lib/</a> &#187; agent.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-supertest/node_modules/supertest/lib/</a> » agent.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -360,16 +358,16 @@ module.exports = TestAgent;
  * @api public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function TestAgent(app, options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!(this instanceof TestAgent)) <span class="cstat-no" title="statement not covered" >return new TestAgent(app, options);</span></span>
-<span class="cstat-no" title="statement not covered" >  if (typeof app === 'function') <span class="cstat-no" title="statement not covered" >app = http.createServer(app); </span></span> // eslint-disable-line no-param-reassign
-<span class="cstat-no" title="statement not covered" >  if (options) {</span>
-<span class="cstat-no" title="statement not covered" >    this._ca = options.ca;</span>
-<span class="cstat-no" title="statement not covered" >    this._key = options.key;</span>
-<span class="cstat-no" title="statement not covered" >    this._cert = options.cert;</span>
+<span class="fstat-no" title="function not covered">function TestAgent(app, options) {</span>
+<span class="cstat-no" title="statement not covered">  if (!(this instanceof TestAgent)) <span class="cstat-no" title="statement not covered">return new TestAgent(app, options);</span></span>
+<span class="cstat-no" title="statement not covered">  if (typeof app === 'function') <span class="cstat-no" title="statement not covered">app = http.createServer(app); </span></span> // eslint-disable-line no-param-reassign
+<span class="cstat-no" title="statement not covered">  if (options) {</span>
+<span class="cstat-no" title="statement not covered">    this._ca = options.ca;</span>
+<span class="cstat-no" title="statement not covered">    this._key = options.key;</span>
+<span class="cstat-no" title="statement not covered">    this._cert = options.cert;</span>
   }
-<span class="cstat-no" title="statement not covered" >  Agent.call(this);</span>
-<span class="cstat-no" title="statement not covered" >  this.app = app;</span>
+<span class="cstat-no" title="statement not covered">  Agent.call(this);</span>
+<span class="cstat-no" title="statement not covered">  this.app = app;</span>
 }
 &nbsp;
 /**
@@ -380,28 +378,29 @@ TestAgent.prototype.__proto__ = Agent.prototype;
 &nbsp;
 // override HTTP verb methods
 methods.forEach(function(method) {
-  TestAgent.prototype[method] = <span class="fstat-no" title="function not covered" >function(url, fn) {</span>   // eslint-disable-line no-unused-vars
-<span class="cstat-no" title="statement not covered" >    var req = new Test(this.app, method.toUpperCase(), url);</span>
-<span class="cstat-no" title="statement not covered" >    req.ca(this._ca);</span>
-<span class="cstat-no" title="statement not covered" >    req.cert(this._cert);</span>
-<span class="cstat-no" title="statement not covered" >    req.key(this._key);</span>
+  TestAgent.prototype[method] = <span class="fstat-no" title="function not covered">function(url, fn) {</span>   // eslint-disable-line no-unused-vars
+<span class="cstat-no" title="statement not covered">    var req = new Test(this.app, method.toUpperCase(), url);</span>
+<span class="cstat-no" title="statement not covered">    req.ca(this._ca);</span>
+<span class="cstat-no" title="statement not covered">    req.cert(this._cert);</span>
+<span class="cstat-no" title="statement not covered">    req.key(this._key);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    req.on('response', this._saveCookies.bind(this));</span>
-<span class="cstat-no" title="statement not covered" >    req.on('redirect', this._saveCookies.bind(this));</span>
-<span class="cstat-no" title="statement not covered" >    req.on('redirect', this._attachCookies.bind(this, req));</span>
-<span class="cstat-no" title="statement not covered" >    this._attachCookies(req);</span>
+<span class="cstat-no" title="statement not covered">    req.on('response', this._saveCookies.bind(this));</span>
+<span class="cstat-no" title="statement not covered">    req.on('redirect', this._saveCookies.bind(this));</span>
+<span class="cstat-no" title="statement not covered">    req.on('redirect', this._attachCookies.bind(this, req));</span>
+<span class="cstat-no" title="statement not covered">    this._attachCookies(req);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return req;</span>
+<span class="cstat-no" title="statement not covered">    return req;</span>
   };
 });
 &nbsp;
 TestAgent.prototype.del = TestAgent.prototype.delete;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:06:58 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 15:25:11 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
