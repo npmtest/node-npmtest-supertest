@@ -1,6 +1,6 @@
 # npmtest-supertest
 
-#### test coverage for  [supertest (v3.0.0)](https://github.com/visionmedia/supertest#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-supertest.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-supertest) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-supertest.svg)](https://travis-ci.org/npmtest/node-npmtest-supertest)
+#### basic test coverage for  [supertest (v3.0.0)](https://github.com/visionmedia/supertest#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-supertest.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-supertest) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-supertest.svg)](https://travis-ci.org/npmtest/node-npmtest-supertest)
 
 #### SuperAgent driven library for testing HTTP servers
 
